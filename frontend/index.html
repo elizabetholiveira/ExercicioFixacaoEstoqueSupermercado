@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Estoque de supermercado</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Estoque de supermercado</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/3142/3142740.png" alt="desenho de cesta de mercado">
+        </header>
+
+        <section>
+
+            <div class="bloco" id="b2">
+
+                <form id="formulariopost">
+                    <label for="name">Nome:</label>
+                    <input type="text" required>
+                    <label for="price">Preço:</label>
+                    <input type="text" required>
+                </form>
+
+                <button type="submit" onclick="mensagem()">Adicionar</button>
+
+            </div>
+
+            <div class="bloco" id="b1">
+
+                <form id="formularioid">
+                    <label for="id"></label>
+                    <input type="text" placeholder="Digite o id do produto" required>
+                </form>
+
+                <button>Pesquisar</button>
+
+                <table id="tableid">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="buscaid">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="bloco" id="b3">
+                <table id="tableall">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tudo">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </body> 
+
+    <footer>
+        <script src="script.js"></script>
+        <p>2023, Beth &copy;</p>
+    </footer>
+</html>
