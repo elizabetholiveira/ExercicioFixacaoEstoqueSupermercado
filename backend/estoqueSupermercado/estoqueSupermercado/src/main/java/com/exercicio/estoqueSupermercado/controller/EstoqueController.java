@@ -12,25 +12,23 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/estoque")
+@CrossOrigin(origins = "http://127.0.0.1.5500/")
 public class EstoqueController {
 
     @Autowired
     EstoqueService estoqueService;
 
     //Ver tudo
-    @CrossOrigin(origins = "http://127.0.0.1.5500/")
     @GetMapping
     public ResponseEntity<List<EstoqueModel>> verTudo() { return ResponseEntity.ok(estoqueService.verTudo());}
 
     //Ver por ID
-    @CrossOrigin(origins = "http://127.0.0.1.5500/")
     @GetMapping(path = "/{id}")
     public Optional<EstoqueModel> verPorId(@PathVariable Long id) {
         return estoqueService.verPorId(id);
     }
 
     //Adicionar item
-    @CrossOrigin(origins = "http://127.0.0.1.5500/")
     @PostMapping
     public ResponseEntity<EstoqueModel> adicionar(@RequestBody EstoqueModel estoqueModel){
         EstoqueModel novoItem = estoqueService.adicionar(estoqueModel);

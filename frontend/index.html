@@ -20,23 +20,28 @@
 
                 <form id="formulariopost">
                     <label for="name">Nome:</label>
-                    <input type="text" required>
+                    <input type="text" id="name" name="name" required> <!-- Adicionado name="name" -->
                     <label for="price">Preço:</label>
-                    <input type="text" required>
-                </form>
+                    <input type="number" id="price" name="price" required> <!-- Adicionado name="price" -->
+                    <button type="submit">Adicionar</button>
+                  </form>
+                 
+                  
+                  
+                  
+                  
 
-                <button type="submit" onclick="mensagem()">Adicionar</button>
 
             </div>
 
             <div class="bloco" id="b1">
 
                 <form id="formularioid">
-                    <label for="id"></label>
-                    <input type="text" placeholder="Digite o id do produto" required>
+                    <label for="id">ID:</label>
+                    <input type="text" id="idInput" placeholder="Digite o id do produto" required>
+                    <button type="button" onclick="pesquisarProduto()">Pesquisar</button>
                 </form>
 
-                <button>Pesquisar</button>
 
                 <table id="tableid">
                     <thead>

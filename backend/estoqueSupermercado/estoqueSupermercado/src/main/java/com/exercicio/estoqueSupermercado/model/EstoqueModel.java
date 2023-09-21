@@ -24,6 +24,6 @@ public class EstoqueModel {
     private String name;
 
     @Column(nullable = false)
-    private BigDecimal price;
+    private double price;
 
 }
